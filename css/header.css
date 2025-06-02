@@ -1,15 +1,111 @@
 .header {
-  border: 5px solid hotpink;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
 }
+.layout {
+  max-width: 1280px;
+  width: 100%;
+  background-color: #ffffff;
+
+  /* 
+  margin-left: auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0; 
+  */
+
+  /* 영역을 가운데 정렬하기 */
+  margin: 0 auto;
+}
+
 .header_top {
+  /* padding-top: 12px;
+  padding-bottom: 12px; */
+
+  padding: 12px 0;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header_top_left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
+.logo {
+  width: 144px;
+  height: 22px;
+}
+.search {
+  width: 355px;
+  height: 46px;
+  border: 1px solid #dfdfdf;
+  border-radius: 23px;
+
+  padding-left: 25px;
+  padding-right: 25px;
+
+  display: flex;
+  align-items: center;
+}
+
+.search form {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
+
+#good {
+  flex: 1;
+  border: 0;
+  border: none;
+  outline-style: none;
+}
+
+.bt_search {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.sale {
+  width: 180px;
+  height: 50px;
+}
+
+.sale img {
+  width: 100%;
+  height: auto;
+}
+
 .header_top_right {
 }
+
+.link_site {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.main_menu {
+  display: flex;
+}
+
 .header_bottom {
+  display: flex;
+  justify-content: space-between;
 }
-.header_bottom_left {
+
+.member_menu {
+  display: flex;
+  gap: 25px;
 }
-.header_bottom_right {
+
+.member_menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
