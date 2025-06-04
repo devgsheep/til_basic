@@ -1,0 +1,11 @@
+.main {
+  position: relative;
+  display: block;
+  padding-top: 153px;
+}
+
+@media all and (max-width: 1024px) {
+  .main {
+    padding-top: calc(64px + 10px);
+  }
+}

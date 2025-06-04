@@ -247,3 +247,120 @@
 ```html
 <link rel="stylesheet" href="css/header.css" />
 ```
+
+## 4.3. display의 이해
+
+- block, inline, inline-block, none, flex ...
+
+### 4.3.1. block
+
+- 하나의 `침범할 수 없는 가로 영역`
+- div, ul, li, h1~h6, p...
+- 기본적으로 width: 100%;
+
+### 4.3.2. inline
+
+- 한개의 글자처럼 처리됩니다.
+- width, height, maring, padding을 적용하지 못함.
+- a, img, span, b, strong...
+
+### 4.3.3. inline-block
+
+- lnline과 block을 조합한다.
+- 가로로 배치되면서, width, height 등을 자유롭게 활용한다.
+
+### 4.3.4. flex
+
+- block이면서 inline이면서, 가로 정렬, 세로 정렬, 여백조절 가능
+- 가로로 레이아웃 배치시 최적화
+- https://studiomeal.com/archives/197
+- justify-content, align-ltems, gap, flex: 숫자...
+
+### 4.3.5. grid(추후 파악)
+
+- block이면서 inline이면서, 가로 정렬, 세로 정렬, 여백조절 가능
+- 표처럼 레이아웃 배치시 최적화
+- https://studiomeal.com/archives/533
+
+### 4.3.6. none
+
+- 화면에 html 태그가 없는 것처럼 처리
+- js에서도 없다고 판단하여 초기 처리 코드 불가
+
+## 4.4. 반응형의 이해
+
+- 넓은 화면부터 html, css 작업
+- 좁은 화면으로 html, css 마무리 진행 권장
+
+### 4.4.1. 반응형 체크 사항
+
+- html에 반드시 아래 코드가 있어야 합니다.
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+### 4.4.2. 미디어 쿼리
+
+- 큰사이즈 부터 작은 사이즈로 max-width를 추천합니다.
+- 공백을 주의해야 합니다.
+- 반드시 {} 안쪽에 원하는 css 코드 하셔야 합니다.
+
+```css
+@media and (max-width: 1280px) {
+  원하는 css 작성
+}
+@media and (max-width: 1024px) {
+  원하는 css 작성
+}
+@media and (max-width: 960px) {
+  원하는 css 작성
+}
+@media and (max-width: 540px) {
+  원하는 css 작성
+}
+```
+
+## 4.5. 글꼴 셋팅하기
+
+- 모든 css 및 html 작업 전에 결정하여야 합니다.
+- 디자이너 및 기획자에게 문의해야 합니다.
+
+### 4.5.1. 구글 웹폰트 활용하기
+
+- https://fonts.google.com/
+
+### 4.5.2. 눈누 웹폰트 활용하기
+
+- https://noonnu.cc/
+
+## 4.6. position의 이해
+
+- relative, absolute, fixed...
+
+### 4.6.1. absolute 주의사항
+
+- 픽셀로 정확한 위치를 지정하는 경우 사용
+- 반드시 상위 태그에 position이 명시되어 있어야 함
+
+```css
+.엄마 {
+  position: relative;
+}
+
+.자식 {
+  position: absolute;
+}
+```
+
+### 4.6.2. fixed란
+
+- 무조건 웹브라우저를 기준으로 위치설정
+
+```css
+.대상 {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+```

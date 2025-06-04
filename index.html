@@ -6,6 +6,8 @@
     <title>NOL 인터파크</title>
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/banner.css" />
   </head>
   <body>
     <!-- 영역구분:내용과 바탕 -->
@@ -62,12 +64,12 @@
             </div>
             <div class="header_top_right">
               <ul class="link_site">
-                <li>
+                <li class="link_site_line">
                   <a href="#" target="_blank">
                     <img src="images/partner-nol.svg" alt="NOL" />
                   </a>
                 </li>
-                <li>
+                <li class="link_site_line">
                   <a href="#" target="_blank">
                     <img src="images/partner-triple.svg" alt="TRIPLE" />
                   </a>
@@ -77,6 +79,7 @@
                     <img
                       src="images/partner-interpark-global.svg"
                       alt="Interpark Global"
+                      style="transform: translateY(2px)"
                     />
                   </a>
                 </li>
@@ -88,7 +91,7 @@
             <div class="header_bottom_left">
               <ul class="main_menu">
                 <li>
-                  <a href="#">홈</a>
+                  <a href="#" class="focus"> 홈 </a>
                 </li>
                 <li>
                   <a href="#">투어</a>
@@ -149,7 +152,7 @@
                         stroke-linecap="round"
                         stroke-dasharray="1 3"
                       ></line></svg
-                    >내예약
+                    >내 예약
                   </a>
                 </li>
               </ul>
@@ -157,10 +160,78 @@
           </div>
         </div>
       </header>
+      <!-- 모바일용 : 상단 -->
+      <div class="mobile_header">
+        <div class="moblie_header_left">
+          <ul class="mobile_menu">
+            <li>
+              <a href="#">
+                <img
+                  src="images/nol-interpark-logo-multiline.svg"
+                  alt="인터파크"
+                />
+              </a>
+            </li>
+            <li><a href="#">투어</a></li>
+            <li><a href="#">티켓</a></li>
+          </ul>
+        </div>
+        <div class="moblie_header_right">
+          <button class="mobile_search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M15.5 15.5L20.5 20.5"
+                stroke="#29292D"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <circle
+                cx="10.5"
+                cy="10.5"
+                r="6.5"
+                stroke="#29292D"
+                stroke-width="1.5"
+              ></circle>
+            </svg>
+          </button>
+        </div>
+      </div>
       <!-- 영역구분 : 내용 -->
       <main class="main">
         <!-- 배너 -->
-        <div class="banner"></div>
+        <div class="banner">
+          <div class="layout">
+            <!-- 배너 슬라이드 -->
+            <div class="banner_wrap">
+              <!-- 슬라이드 목록 -->
+              <div class="banner_slide">
+                <a href="#" class="banner_slide_item">
+                  <img src="images/s1.png" alt="이미지" />
+                </a>
+                <a href="#" class="banner_slide_item">
+                  <img src="images/s2.png" alt="이미지" />
+                </a>
+              </div>
+              <!-- 좌측이동 버튼 -->
+              <button class="banner_slide_prev">
+                <img src="images/slide_arrow.svg" alt="이전" />
+              </button>
+              <!-- 우측이동 버튼 -->
+              <button class="banner_slide_next">
+                <img src="images/slide_arrow.svg" alt="다음" />
+              </button>
+              <!-- 페이지네이션 -->
+              <div class="banner_slide_pg">페이지네이션</div>
+            </div>
+          </div>
+        </div>
         <!-- 투어특가 -->
         <div class="tour"></div>
         <!-- 트립 -->
