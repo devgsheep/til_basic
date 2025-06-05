@@ -11,6 +11,7 @@
   gap: 25px;
 }
 .banner_slide_item {
+  display: block;
   border-radius: 15px;
   overflow: hidden;
 
@@ -28,6 +29,7 @@
   position: absolute;
   left: 0px;
   top: 50%;
+  z-index: 100;
 
   transform: translateY(-50%) translateX(-50%);
 
@@ -55,6 +57,7 @@
   position: absolute;
   right: 0px;
   top: 50%;
+  z-index: 100;
 
   transform: translateY(-50%) translateX(50%);
 
@@ -76,4 +79,22 @@
 
 .banner_slide_pg {
   display: none;
+}
+
+@media all and (max-width: 1280px) {
+  .banner_slide_item {
+    height: 275px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .banner_slide_item {
+    height: 202px;
+  }
+}
+
+@media all and (max-width: 760px) {
+  .sw_banner {
+    max-width: 350px;
+  }
 }
