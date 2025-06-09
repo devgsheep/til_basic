@@ -50,22 +50,13 @@ window.addEventListener("DOMContentLoaded", function () {
   // 슬라이드 배치 장소
   const bannerPos = document.querySelector(".sw_banner .swiper-wrapper");
   // html 태그 만들기
-  const tag = `
-  <div class="swiper-slide">
-    <a href="#" class="banner_slide_item">
-      <img src="images/s1.png" alt="이미지" />
-    </a>
-  </div>
-    `;
-
   // 6개 만들기
   let htmlTag = "";
 
   for (let i = 0; i < total; i++) {
     htmlTag =
       htmlTag +
-      `
-    <div class="swiper-slide">
+      `<div class="swiper-slide">
     <a href="${apiData[i].link}" class="banner_slide_item">
       <img src="${apiData[i].image}" alt="${apiData[i].alt}" />
     </a>
@@ -90,7 +81,7 @@ window.addEventListener("DOMContentLoaded", function () {
     },
 
     navigation: {
-      nextEl: ".banner_slide_next"`,
+      nextEl: ".banner_slide_next",
       prevEl: ".banner_slide_prev",
     },
     breakpoints: {
