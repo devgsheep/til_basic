@@ -1,0 +1,121 @@
+.tour {
+  position: relative;
+}
+.layout {
+  max-width: 1280px;
+  width: 100%;
+  /* 영역 가운데 정렬 */
+  margin: 0 auto;
+}
+.tour_top {
+  padding-top: 65px;
+  padding-bottom: 25px;
+}
+.tour_top_title {
+  display: block;
+  width: 100%;
+}
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  color: #000000;
+}
+.subtitle {
+  text-align: center;
+  color: rgba(18, 18, 18, 0.5);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.tour_top_category {
+  /* 생략가능 */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.tour_button_list {
+  display: flex;
+  gap: 6px;
+}
+.tour_button_list li {
+}
+.tour_button_list li button {
+  border-radius: 22px;
+  border: 1px solid #e5e5e5;
+  /* padding: 11px 16px; */
+  height: 44px;
+  padding: 0 18px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.tour_button_list li button:active {
+  opacity: 0.65;
+}
+
+.tour_focus {
+  background-color: #333 !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.tour_bottom {
+  /* 생략가능 */
+  display: block;
+  width: 100%;
+}
+.tour_slide_wrap {
+  position: relative;
+}
+.tour_slide {
+  display: flex;
+  gap: 26px;
+}
+.tour_item {
+  display: block;
+  height: 365px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.tour_item_image {
+  width: 100%;
+  height: 255px;
+}
+.tour_item_image img {
+  /* 영역 커버 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tour_item_info {
+  position: relative;
+  padding: 20px;
+}
+.tour_item_info .city {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  transform: translateY(-50%);
+  background-color: #4154ff;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 10px;
+  border-radius: 4px;
+}
+.tour_item_info .sale {
+}
+.tour_item_info .item_title {
+}
+.tour_item_info .price {
+}
+
+.tour_slide_prev {
+}
+.tour_slide_next {
+}
+.tour_more {
+}
+.tour_more_bt {
+}
