@@ -986,23 +986,3 @@ window.addEventListener("load", function () {
       prevEl: ".버튼클래스명(이전)",
     },
 ```
-
-<!-- 구글 계정 새로 만들고 난 후
-
-1. PC계정 자격 증명 제거, git 제거
-
-2. 깃 허브로 새로 가입 (new.. til_basic 생성)
-
-3. VSCode 터미널 창 실행(ctrl + `)
-
-  git remote -v
-  - 온라인 주소 확인
-
-  git remote remove origin
-  - 온라인 주소 삭제
-
-  git remote add origin https://github.com/devgsheep/til_basic.git
-  - git 연결
-
-
- -->
