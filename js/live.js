@@ -14,7 +14,7 @@ window.addEventListener("load", function () {
       960: {
         slidesPerView: 2,
         spaceBetween: 20,
-        slidesPerGroup: 3,
+        slidesPerGroup: 2,
       },
       1024: {
         slidesPerView: 3,
