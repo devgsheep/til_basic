@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
   // swiper 만들기 실행
 
-    //포커스 되었을 때 적용될 포커스 이름
+  //포커스 되었을 때 적용될 포커스 이름
   const focusName = "ticket_focus";
   const bts = document.querySelectorAll(".ticket_button_list li button");
   // 태그 등의 DOM 들을 모아둔 배열을 다룰 때 추천하는 반복 문법
@@ -22,8 +22,8 @@ window.addEventListener("load", function () {
   }
 
   new Swiper(".sw_ticket", {
-    slidesPerView: 7,
-    spaceBetween: 10,
+    slidesPerView: 3,
+    spaceBetween: 20,
     slidesPerGroup: 1,
 
     navigation: {
@@ -32,11 +32,6 @@ window.addEventListener("load", function () {
     },
 
     breakpoints: {
-      960: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-        slidesPerGroup: 2,
-      },
       1024: {
         slidesPerView: 3,
         spaceBetween: 20,

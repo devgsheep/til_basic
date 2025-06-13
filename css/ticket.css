@@ -1,7 +1,6 @@
 .ticket {
 }
 .layout {
-  position: relative;
 }
 .ticket_top {
 }
@@ -65,61 +64,106 @@
 }
 .ticket_slide_item {
   display: block;
-  overflow: hidden;
-  height: 550px;
+  width: 100%;
   border-radius: 11px;
 }
 
-.ticket_slide_image {
-  width: 100%;
-  height: 400px;
+.ticket_image {
+  position: relative;
+  max-height: 400px;
+  height: 31.25vw;
+
+  overflow: hidden;
+  border-radius: 11px;
 }
 
-.ticket_slide_item img {
+.ticket_image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  height: 400px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04)),
+    linear-gradient(180deg, transparent 68.5%, rgba(0, 0, 0, 0.6));
+}
+
+.ticket_image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 0px 0px 12px 12px;
+}
+
+.ticket_rank {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 70px;
+  color: #fff;
+  font-weight: 700;
+  z-index: 100;
 }
 
 .ticket_item_info {
-  padding: 7px 10px;
-  padding-top: 7px;
+  height: 28%;
+  min-height: 154px;
 
-  height: calc(100% - 150px);
+  padding: 18px 10px;
 }
 
 .ticket_item_name {
   font-size: 18px;
   font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+
+  /* 글 두줄 처리 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 
 .ticket_item_place {
-  padding-top: 7px;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 400;
   color: #666;
+  padding: 5px 0;
+
+  /* 글 한줄 처리 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .ticket_item_date {
-  padding: 5px 0;
   font-size: 14px;
   color: #999;
 }
-.ticket_item_comment {
-  display: inline-block;
-  padding: 3px 5px;
-  border: 1px solid rgba(239, 62, 67, 0.3);
+
+.ticket_item_option {
+  display: flex;
+  gap: 5px;
+  padding: 7px 0;
+}
+
+.ticket_item_option span {
   font-size: 11px;
+  font-weight: 400;
+}
+
+.ticket_item_red {
+  border: 1px solid rgba(239, 62, 67, 0.3);
+  padding: 5px;
   color: #ef3e43;
   border-radius: 2px;
 }
 
-.ticket_item_comment1 {
-  display: inline-block;
-  padding: 3px 5px;
+.ticket_item_blue {
   border: 1px solid rgba(74, 149, 255, 0.3);
-  font-size: 11px;
+  padding: 5px;
   color: #4a95ff;
   border-radius: 2px;
 }
@@ -137,7 +181,7 @@
   height: 48px;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-150%);
   border-radius: 24px;
 }
 .ticket_slide_prev img {
@@ -157,7 +201,7 @@
   height: 48px;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  transform: translateX(50%);
+  transform: translateX(50%) translateY(-150%);
   border-radius: 24px;
 }
 .ticket_footer {
@@ -178,4 +222,16 @@
   font-weight: 700;
   color: #333;
   border-radius: 28px;
+}
+
+/* 반응형 */
+@media all and (max-width: 1280px) {
+}
+@media all and (max-width: 1080px) {
+}
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 960px) {
+}
+@media all and (max-width: 760px) {
 }
