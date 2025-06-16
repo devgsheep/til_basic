@@ -123,6 +123,8 @@
   font-size: 14px;
   color: #666;
   display: flex;
+  flex-wrap: wrap;
+
   padding: 5px 0;
 }
 .trip_schedule span {
