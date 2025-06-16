@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
   // swiper 만들기 실행
   new Swiper(".sw_trip", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 10,
     slidesPerGroup: 1,
 

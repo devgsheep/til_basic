@@ -1,17 +1,15 @@
 .live {
+  padding-top: 60px;
 }
 .layout {
 }
 .live_header {
-  padding-top: 30px;
   padding-bottom: 25px;
 }
 .live_header_title {
   text-align: center;
 }
 .live_header_title img {
-  width: 155px;
-  height: 40px;
 }
 .live_slide_wrap {
   position: relative;
@@ -209,6 +207,52 @@
 @media all and (max-width: 1080px) {
 }
 @media all and (max-width: 1024px) {
+  .live {
+    border-top: 8px solid #f0f4f4;
+    padding-top: 20px;
+  }
+  .live_info {
+    padding: 10px;
+  }
+  .live_wait {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0 10px;
+    height: 20px;
+  }
+  .live_item_title {
+    font-size: 14px;
+  }
+  .live_day_date {
+    font-size: 18px;
+  }
+  .live_day_time {
+    font-size: 30px;
+  }
+  .live_detail {
+    padding: 10px;
+  }
+  .live_detail_image {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 10px;
+  }
+  .live_detail_title {
+    font-size: 13px;
+    position: relative;
+    top: 15px;
+  }
+
+  .live_slide_next,
+  .live_slide_prev {
+    display: none;
+  }
+  .live_go_bt {
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+  }
 }
 @media all and (max-width: 960px) {
 }

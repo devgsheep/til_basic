@@ -40,15 +40,12 @@
   vh? view port height
   
   height: 10vw > 가로가 변하면 높이에 적용*/
-  max-height: 400px;
-  height: 31.25vw;
 }
 
 .trip_image {
   /* max-height: 245px; */
   /* height: 19.14vw; */
-  height: 61.25%;
-
+  height: 245px;
   border-radius: 11px 11px 0 0;
   overflow: hidden;
 }
@@ -63,9 +60,7 @@
 .trip_info {
   position: relative;
   /* 높이에서 그림범위를 뺀 값 */
-  /* height: calc(100% - 245px); */
-  height: 38.75%;
-
+  height: calc(100% - 245px);
   /* padding : 위아래px 좌우px */
   padding: 20px 25px;
 
@@ -161,6 +156,11 @@
   font-weight: 700;
 }
 
+.trip_price .m_line {
+  text-decoration: line-through;
+  color: rgb(102, 102, 102);
+  font-size: 13px;
+}
 .trip_slide_prev {
   display: flex;
   align-items: center;
@@ -202,7 +202,7 @@
 .trip_footer {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 .trip_more_bt {
   display: flex;
@@ -223,38 +223,78 @@
 /* 반응형 */
 @media all and (max-width: 1280px) {
 }
-@media all and (max-width: 1100px) {
-  .trip_info {
-    padding: 15px 25px;
-  }
-  .trip_schedule {
-    padding: 0;
-  }
-}
-@media all and (max-width: 990px) {
-  .trip_item_title {
-    font-size: 17px;
-    line-height: 1.3;
-  }
+@media all and (max-width: 1080px) {
 }
 @media all and (max-width: 1024px) {
-}
-@media all and (max-width: 960px) {
-  .trip_item_title {
-    white-space: nowrap;
-    line-height: 1.6;
+  .trip {
+    border-top: 8px solid #f0f4f4;
+    padding-top: 30px;
   }
-}
-@media all and (max-width: 900px) {
-  .trip_slide_item {
-    height: 270px;
+
+  .trip_header {
+    padding-bottom: 15px;
+  }
+
+  .trip_header_title {
+    gap: 5px;
+  }
+
+  .trip_header_title img:first-child {
+    /* scale : 50% */
+    /* transform: scale(0.7); */
+    width: 69px;
+  }
+  .trip_header_title img:last-child {
+    width: 25px;
+  }
+  .trip_header_text {
+    font-size: 15px;
+    padding-top: 10px;
+  }
+
+  /* 트릭 swiper의 visible 속성 바꿈 */
+  .sw_trip {
+    overflow: visible !important;
+  }
+  /* 트릭 swiper의 너비 강제 조절 */
+  .sw_trip .swiper-slide {
+    width: 230px !important;
+  }
+
+  .trip_image {
+    height: 140px;
+  }
+
+  .trip_info {
+    padding: 15px;
+    padding-bottom: 13px;
+  }
+  .trip_item_title {
+    font-size: 15px;
   }
   .trip_schedule {
-    overflow: hidden;
+    font-size: 13px;
+    display: flex;
+    /* flex 요소들을 배치하다가 줄내림 하라 */
+    flex-wrap: wrap;
   }
-  .trip_schedule span {
-    white-space: nowrap;
+
+  .trip_more_bt {
+    width: 100%;
+    border-radius: 4px;
+    height: 50px;
   }
+
+  .trip_slide_next,
+  .trip_slide_prev {
+    display: none;
+  }
+
+  .trip_footer {
+    padding-top: 12px;
+  }
+}
+@media all and (max-width: 960px) {
 }
 @media all and (max-width: 760px) {
 }
