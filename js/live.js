@@ -28,11 +28,11 @@ window.addEventListener("load", function () {
     {
       링크: "#",
       이미지:
-        "https://common-live-vod.interparkcdn.net/data/image/20250611/14/159/20250611064830.png",
+        "https://common-live-vod.interparkcdn.net/data/image/20250610/14/153/20250610023358.jpeg",
       alt: "라이브",
       상태: [{ 스타일: "black", 텍스트: "방송예정" }],
-      제목: "[몬드리안 이태원&테이크호텔 서울광명&인제 스피디움] 도심 호캉스&강원 숲캉스 특집!",
-      날짜: "06월 19일 (목)",
+      제목: "[휘닉스 브랜드 호텔&리조트] 여름맞이 평창&제주 특가",
+      날짜: "06월 17일 (목)",
       시간: "19:00",
     },
     {
