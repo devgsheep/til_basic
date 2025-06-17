@@ -22,6 +22,7 @@
   position: relative;
   display: block;
   width: 100%;
+  height: 455px;
   max-height: 455px;
   min-height: 286px;
   border-radius: 11px;
@@ -66,7 +67,7 @@
 .live_state {
   display: flex;
 }
-.live_wait {
+.live_wait_black {
   display: flex;
   align-items: center;
   font-size: 13px;
@@ -76,6 +77,17 @@
   padding: 0 15px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.live_wait_red {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  height: 32px;
+  border-radius: 16px;
+  padding: 0 15px;
+  color: #fff;
+  background-color: #ef4243;
 }
 .live_item_title {
   padding: 5px 0;
@@ -214,7 +226,13 @@
   .live_info {
     padding: 10px;
   }
-  .live_wait {
+  .live_wait_red {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0 10px;
+    height: 20px;
+  }
+  .live_wait_black {
     font-size: 10px;
     font-weight: 400;
     padding: 0 10px;
