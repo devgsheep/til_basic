@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", function () {
   // 웹브라우저의 스크롤을 체크하겠다.
   window.addEventListener("scroll", function () {
     // 스크롤바의 최상단
-    const scY = window.scrollY;
+    const scY:number = window.scrollY;
     if (scY > 0) {
       //   console.log("스크롤되었다.");
       headerTop?.classList.add("header_top_scroll");
