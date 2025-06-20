@@ -158,8 +158,10 @@
 
 /* 모바일 하단 */
 .mb_footer {
+  display: none;
   background-color: #f7f7f8;
   padding: 20px;
+  margin-top: 20px;
 }
 
 .mb_footer_menu {
@@ -206,15 +208,31 @@
 }
 
 .mb_footer_hide {
-  /* display: none; */
+  display: none;
 }
 
+/* js에서 추가하도록 함 */
+.mb_footer_show {
+  display: block;
+}
 #mb_bt {
-display: flex;
-align-items: center;
-gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
 }
 #mb_bt i {
 }
 #mb_bt i img {
+  transform: scale(0.7) rotate(90deg);
+}
+.img-up {
+  transform: scale(0.7) rotate(-90deg) !important;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .mb_footer {
+    display: block;
+  }
 }

@@ -25,7 +25,7 @@ window.addEventListener("load", function () {
   // 타이머 만들기, 1초마다 (마우스커서로 제어하지 않을때는 let bannerTimer 삭제)
   let bannerTimer = setInterval(function () {
     startIndex += 1;
-    if (startIndex > totalCount) {
+    if (startIndex >= totalCount) {
       startIndex = 0;
     }
     bannerAnchorTag.href = bannerApiData[startIndex].link;
