@@ -1,5 +1,5 @@
 // 파일 로딩 완료 시 실행
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
   //배너 데이터
   const bannerApiData = [
     { uid: 1, link: "#", image: "images/rolling/b1.png", title: "배너1" },
@@ -22,8 +22,8 @@ window.addEventListener("load", function () {
   let startIndex = 0;
   let totalCount = bannerApiData.length;
 
-  // 타이머 만들기, 1초마다 (마우스커서로 제어하지 않을때는 let bannerTimer 삭제)
-  let bannerTimer = setInterval(function () {
+  // 배너 교환해 주는 기능
+  const changeBanner = () => {
     startIndex += 1;
     if (startIndex >= totalCount) {
       startIndex = 0;
@@ -31,16 +31,19 @@ window.addEventListener("load", function () {
     bannerAnchorTag.href = bannerApiData[startIndex].link;
     bannerImgTag.src = bannerApiData[startIndex].image;
     bannerImgTag.alt = bannerApiData[startIndex].title;
-  }, 1000);
+  };
+
+  // 타이머 만들기, 1초마다 (마우스커서로 제어하지 않을때는 let bannerTimer 삭제)
+  let bannerTimer = setInterval(changeBanner, 1000);
 
   // 마우스 커서 배너 제어하기
-  bannerAnchorTag.addEventListener("mouseenter", function () {
+  bannerAnchorTag.addEventListener("mouseenter", () => {
     // 배너 타이머 지우기
     clearInterval(bannerTimer);
   });
-  bannerAnchorTag.addEventListener("mouseleave", function () {
+  bannerAnchorTag.addEventListener("mouseleave", () => {
     // 배너 타이머 다시 실행
-    bannerTimer = setInterval(function () {
+    bannerTimer = setInterval(() => {
       startIndex = startIndex + 1;
       if (startIndex >= totalCount) {
         startIndex = 0;
