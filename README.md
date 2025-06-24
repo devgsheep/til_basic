@@ -1088,7 +1088,7 @@ window.addEventListener("load", function () {
   }
 }
 ```
-
+<!-- 위와 같은 결과 -->
 ```css
 .card {
   border: 1px solid #000;
