@@ -1010,3 +1010,115 @@ window.addEventListener("load", function () {
       prevEl: ".버튼클래스명(이전)",
     },
 ```
+
+# 7. SCSS
+
+## 7.1. VSCode 컴파일 플러그인 설치
+
+- `Live Sass Compiler` 설치
+
+## 7.2. 실습 환경
+
+- `scss 폴더` 만들기
+- `scss 폴더/test.scss 파일` 만들기
+- 반드시 VSCode의 하단 바에 `Watch Sass`를 `Watching...` 으로 선택
+
+## 7.3. 환경 셋팅
+
+- 파일명.scss는 `scss 폴더`에 보관
+- 파일명.css는 `css 폴더`에 보관
+
+### 설정 단계
+
+![Image](https://github.com/user-attachments/assets/66441b8d-ff48-454e-b0b2-b34d10421c95)
+
+- `setting 메뉴` 선택
+  ![Image](https://github.com/user-attachments/assets/e9852bf1-4d00-41af-9d89-5b223d50e707)
+
+- 다음의 코드를 추가한다.
+
+```json
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css",
+      "savePathReplacementPairs": null
+    }
+  ],
+```
+
+## 7.4. 기초 문법
+
+- 참조 : https://www.heropy.dev/p/Y7OrPe
+- 중첩(Nesting)
+
+```scss
+// 중첩 (Nesting)
+.card {
+  border: 1px solid #000;
+  .title {
+    position: relative;
+    font-weight: 700;
+    & {
+      color: blue;
+    }
+    &:active {
+      color: orange;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      background-color: red;
+    }
+  }
+  .content {
+    color: orange;
+  }
+  button {
+    border: 1px solid green;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}
+```
+
+```css
+.card {
+  border: 1px solid #000;
+}
+.card .title {
+  position: relative;
+  font-weight: 700;
+}
+.card .title {
+  color: blue;
+}
+.card .title:active {
+  color: orange;
+}
+.card .title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background-color: red;
+}
+.card .content {
+  color: orange;
+}
+.card button {
+  border: 1px solid green;
+}
+.card button:hover {
+  background-color: red;
+} /*# sourceMappingURL=test.css.map */
+```

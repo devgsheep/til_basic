@@ -1,7 +1,17 @@
+declare var Swiper: any;
+
 window.addEventListener("load", (): void => {
   //데이터
-
-  const tripApiData = [
+  const tripApiData: {
+    링크: string;
+    이미지: string;
+    alt: string;
+    대상: string;
+    상품타이틀: string;
+    스케줄: string[];
+    상품가격: string;
+    정상가: string;
+  }[] = [
     {
       링크: "#",
       이미지:
@@ -12,6 +22,7 @@ window.addEventListener("load", (): void => {
         "[영어캠프홀릭] 사이판 2주, 명문 국제 사립학교 커리큘럼 스쿨링 영어캠프",
       스케줄: ["13박 14일", "인천 출발", "노쇼핑"],
       상품가격: "2,600,000",
+      정상가: "",
     },
     {
       링크: "#",
@@ -47,6 +58,7 @@ window.addEventListener("load", (): void => {
         "[영어캠프홀릭]일본 오키나와 1주 영어캠프, 25년 여름방학 맞이 오키나와 놀이형 영어캠프",
       스케줄: ["6박 7일", "노쇼핑"],
       상품가격: "2,150,000",
+      정상가: "",
     },
     {
       링크: "#",
@@ -93,6 +105,7 @@ window.addEventListener("load", (): void => {
         "[베스트셀러/W트립] 4성급 밍가든VS판보르네오 호핑+자유일정 포함 코타키나발루 5일",
       스케줄: ["3박 5일", "인천 출발", "제주 항공", "쇼핑3회"],
       상품가격: "239,000",
+      정상가: "",
     },
   ];
 

@@ -1,0 +1,31 @@
+.card {
+  border: 1px solid #000;
+}
+.card .title {
+  position: relative;
+  font-weight: 700;
+}
+.card .title {
+  color: blue;
+}
+.card .title:active {
+  color: orange;
+}
+.card .title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background-color: red;
+}
+.card .content {
+  color: orange;
+}
+.card button {
+  border: 1px solid green;
+}
+.card button:hover {
+  background-color: red;
+}/*# sourceMappingURL=test.css.map */
