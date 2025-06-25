@@ -1,31 +1,24 @@
-.card {
-  border: 1px solid #000;
-}
-.card .title {
+.wrap {
   position: relative;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1420px;
 }
-.card .title {
-  color: blue;
+.wrap .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1420px;
 }
-.card .title:active {
-  color: orange;
+.wrap .header .inner {
+  border: 5px solid red;
+  height: 100px;
+  width: 760px;
 }
-.card .title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 32px;
-  height: 32px;
-  background-color: red;
+.wrap .main {
+  width: 1420px;
 }
-.card .content {
-  color: orange;
-}
-.card button {
-  border: 1px solid green;
-}
-.card button:hover {
-  background-color: red;
+.wrap .footer {
+  width: 1420px;
 }/*# sourceMappingURL=test.css.map */

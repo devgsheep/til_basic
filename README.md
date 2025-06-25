@@ -1088,7 +1088,9 @@ window.addEventListener("load", function () {
   }
 }
 ```
+
 <!-- 위와 같은 결과 -->
+
 ```css
 .card {
   border: 1px solid #000;
@@ -1121,4 +1123,81 @@ window.addEventListener("load", function () {
 .card button:hover {
   background-color: red;
 } /*# sourceMappingURL=test.css.map */
+```
+
+### 7.4.2. 변수
+
+```scss
+$width-screen: 960px;
+$pc-w: 760px;
+
+.wrap {
+  position: relative;
+  // 변수 사용하기
+  width: $width-screen;
+  .header {
+    // 변수 사용하기
+    width: $width-screen;
+    .inner {
+      // 변수 사용하기
+      width: $pc-w;
+    }
+  }
+  .main {
+    // 변수 사용하기
+    width: $width-screen;
+  }
+  .footer {
+    // 변수 사용하기
+    width: $width-screen;
+  }
+}
+```
+
+### 7.4.3. 변수를 모으고 다른 scss에서 사용하기
+
+- css로 생성할 필요가 없는 경우 `_파일명.scss` 생성
+- scss 폴더에 `_val.scss` 파일 만듦.
+
+```scss
+$width-screen: 960px;
+$pc-w: 760px;
+```
+
+- 변수 사용시 `@import "val";` `_ `반드시 제거하고 파일명만 적기
+
+```scss
+@import "val"; // _붙이면 안됨
+
+.wrap {
+  position: relative;
+  // 변수 사용하기
+  width: $width-screen;
+  .header {
+    // 변수 사용하기
+    width: $width-screen;
+    .inner {
+      // 변수 사용하기
+      width: $pc-w;
+    }
+  }
+  .main {
+    // 변수 사용하기
+    width: $width-screen;
+  }
+  .footer {
+    // 변수 사용하기
+    width: $width-screen;
+  }
+}
+```
+
+### 7.4.4. 함수(Mixins) 사용하기
+
+- 파일명 `_`를 활용하자. (`scss/_mixins.scss`)
+- 아래처럼 불러들인다.
+
+```scss
+@import "val"; // _붙이면 안됨
+@import "mixins";
 ```
