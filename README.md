@@ -1201,3 +1201,5 @@ $pc-w: 760px;
 @import "val"; // _붙이면 안됨
 @import "mixins";
 ```
+
+# 8. 파비콘 및 아이콘 만들기
