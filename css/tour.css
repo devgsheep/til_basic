@@ -119,6 +119,9 @@
   font-size: 15px;
   font-weight: 400;
   color: rgb(65, 84, 255);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /* 한줄 말줄임 ...은 css로 작업합니다. */
 /* 한줄 이상 말줄임 ...은 css로 작업합니다. */

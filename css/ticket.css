@@ -226,6 +226,36 @@
   border-radius: 28px;
 }
 
+/* 전체보기 */
+
+.poster_all {
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  height: 31.25vw;
+  max-height: 400px;
+  width: auto;
+  flex-direction: column;
+  /* background-color: red; */
+}
+.poster_all a {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+/* 
+.poster_all button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+} */
+
 /* 반응형 */
 @media all and (max-width: 1280px) {
 }
